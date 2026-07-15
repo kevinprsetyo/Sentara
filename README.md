@@ -6,6 +6,7 @@ Sistem manajemen logistik dan rantai pasok berbasis kecerdasan buatan yang diran
 
 ## Daftar Isi
 
+- [Tampilan Aplikasi](#tampilan-aplikasi)
 - [Tentang Proyek](#tentang-proyek)
 - [Arsitektur Sistem](#arsitektur-sistem)
 - [Teknologi yang Digunakan](#teknologi-yang-digunakan)
@@ -19,6 +20,29 @@ Sistem manajemen logistik dan rantai pasok berbasis kecerdasan buatan yang diran
 - [Konfigurasi Lingkungan](#konfigurasi-lingkungan)
 - [API Endpoint](#api-endpoint)
 - [Lisensi](#lisensi)
+
+---
+
+## Tampilan Aplikasi
+
+### 🤖 AI Chat Agent
+Asisten logistik berbasis AI yang dapat membantu merencanakan pengiriman secara interaktif menggunakan percakapan natural.
+
+![AI Chat Agent](screenshots/ai-chat-agent.png)
+
+---
+
+### 📦 Smart Sourcing & Route Planner
+Simulasi perencanaan rute pengiriman berbasis AI dengan perbandingan biaya dari berbagai sumber dan mode transportasi (SEA / LAND).
+
+![Route Planner](screenshots/route-planner.png)
+
+---
+
+### 💬 AI Chat — Hasil Kalkulasi Rute
+Hasil analisis rute optimal yang ditampilkan langsung di dalam percakapan AI, lengkap dengan estimasi biaya, lead time, dan breakdown harga.
+
+![AI Chat Result](screenshots/ai-chat-result.png)
 
 ---
 
