@@ -396,6 +396,3 @@ VITE_GEMINI_API_KEY=your_gemini_api_key
 
 ---
 
-## Lisensi
-
-Proyek ini dikembangkan untuk keperluan portofolio dan pembelajaran. Seluruh hak cipta dipegang oleh pengembang.
