@@ -1,0 +1,97 @@
+# ========================
+# FILE SENSITIF / RAHASIA
+# ========================
+
+# File environment (berisi API key, password, secret)
+.env
+.env.local
+.env.production
+.env.staging
+.env.backup
+*.env
+
+# ========================
+# BACKEND - LARAVEL
+# ========================
+backend-laravel/.env
+backend-laravel/.env.*
+backend-laravel/vendor/
+backend-laravel/node_modules/
+backend-laravel/public/build/
+backend-laravel/public/hot/
+backend-laravel/public/storage/
+backend-laravel/storage/*.key
+backend-laravel/storage/logs/
+backend-laravel/storage/framework/cache/
+backend-laravel/storage/framework/sessions/
+backend-laravel/storage/framework/views/
+backend-laravel/bootstrap/cache/
+backend-laravel/.phpunit.cache
+backend-laravel/.phpunit.result.cache
+backend-laravel/auth.json
+backend-laravel/archive.zip
+
+# File debug / log laravel
+backend-laravel/full_project_logic.txt
+backend-laravel/report.txt
+backend-laravel/tree.txt
+backend-laravel/TODO.md
+backend-laravel/python.log
+
+# File dengan nama tidak standard (artefak debug)
+backend-laravel/Country__where*
+backend-laravel/TradeRule__updateOrCreate*
+backend-laravel/as $port)*
+
+# ========================
+# ROUTE ENGINE - PYTHON
+# ========================
+route-engine-python/.env
+route-engine-python/.env.*
+route-engine-python/__pycache__/
+route-engine-python/*.pyc
+route-engine-python/*.pyo
+route-engine-python/venv/
+route-engine-python/.venv/
+route-engine-python/env/
+route-engine-python/python.log
+route-engine-python/audit.txt
+
+# ========================
+# FRONTEND - REACT / NODE
+# ========================
+frontend-react/.env
+frontend-react/.env.*
+frontend-react/node_modules/
+frontend-react/dist/
+frontend-react/dist-ssr/
+frontend-react/*.local
+frontend-react/kevin.txt
+frontend-react/tree.txt
+
+# ========================
+# UMUM
+# ========================
+
+# Log files
+*.log
+logs/
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Zip / archive
+*.zip
+*.tar.gz
+*.rar

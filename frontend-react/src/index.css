@@ -1,0 +1,128 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    @apply bg-slate-50 text-slate-900;
+    /* Fix for Safari scrolling */
+    -webkit-overflow-scrolling: touch;
+    /* Prevent text size adjustment */
+    -webkit-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+  }
+  
+  /* Safari specific fixes */
+  @supports (-webkit-touch-callout: none) {
+    /* Fix for 100vh issue in Safari */
+    .min-h-screen {
+      min-height: -webkit-fill-available;
+    }
+    
+    /* Fix for sticky headers in Safari */
+    .sticky {
+      position: -webkit-sticky;
+    }
+    
+    /* Smooth scrolling fix */
+    .overflow-y-auto {
+      -webkit-overflow-scrolling: touch;
+    }
+    
+    /* Fix for button tap highlight */
+    button,
+    [role="button"] {
+      -webkit-tap-highlight-color: transparent;
+    }
+  }
+  
+  /* Cross-browser form fixes */
+  input, textarea, select, button {
+    /* Remove Safari default styling */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    /* Remove iOS input shadow */
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+  
+  /* Fix for iOS zoom on input */
+  @media screen and (max-width: 768px) {
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    input[type="number"],
+    textarea,
+    select {
+      font-size: 16px; /* Prevent iOS zoom */
+    }
+  }
+  
+  /* Fix for rounded corners rendering in Safari */
+  .rounded-lg, .rounded-xl, .rounded-2xl, .rounded-full {
+    -webkit-mask-image: -webkit-radial-gradient(white, black);
+  }
+}
+
+@layer utilities {
+  /* Hide scrollbar but keep functionality */
+  .scrollbar-hide {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+  
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none; /* Chrome, Safari and Opera */
+  }
+  
+  /* Fix for backdrop blur in Safari */
+  .backdrop-blur-sm {
+    @supports not (backdrop-filter: blur(4px)) {
+      background-color: rgba(255, 255, 255, 0.9);
+    }
+  }
+  
+  /* Hardware acceleration for animations */
+  .gpu-accelerate {
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+  }
+  
+  /* Safari specific input fixes */
+  .safari-input-fix {
+    border-radius: 8px !important;
+    -webkit-border-radius: 8px !important;
+  }
+}
+
+/* Custom CSS Variables for viewport height */
+:root {
+  --vh: 1vh;
+}
+
+/* Apply safe viewport height */
+.safe-min-h-screen {
+  min-height: calc(var(--vh, 1vh) * 100);
+}
+
+/* Safari-specific fixes */
+.safari-sticky {
+    position: -webkit-sticky;
+    position: sticky;
+}
+
+.safari-scroll {
+    -webkit-overflow-scrolling: touch;
+}
+
+.safari-tap-highlight {
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* Additional Safari fixes */
+@supports (-webkit-touch-callout: none) {
+    .safe-min-h-screen {
+        min-height: -webkit-fill-available;
+    }
+}
